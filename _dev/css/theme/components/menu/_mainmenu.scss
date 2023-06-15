@@ -46,9 +46,10 @@
     &--top {
       @include font-size($font-size-lg);
       font-weight: 700;
-      color: $gray-900;
+      color: $gray-200;
 
       @include hover-focus() {
+        color: $red;
         text-decoration: none;
       }
 
@@ -133,11 +134,47 @@
       z-index: 100;
       padding: map.get($spacers, 4) map.get($spacers, 4) map.get($spacers, 3);
       visibility: hidden;
-      background: $white;
+      background: $gray-200;
       box-shadow: $box-shadow;
       opacity: 0;
       transition: 0.2s ease-in;
       transform: translateY(5px);
     }
+  }
+}
+
+.modal .modal-dialog-aside .modal-content .modal-body {
+  .main-menu__item-link--top {
+    color: $dark;
+  }
+}
+
+.main-menu ul li.main-menu__item--top:first-child ul[data-depth="2"]{
+  display: none !important;
+}
+
+.main-menu__item-link--sub:hover div.img-thumbail {
+	-webkit-animation: shadow-inset-center 0.4s ease-in-out both;
+	        animation: shadow-inset-center 0.4s ease-in-out both;
+}
+
+@-webkit-keyframes shadow-inset-center {
+  0% {
+    -webkit-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
+            box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    -webkit-box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.5);
+            box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.5);
+  }
+}
+@keyframes shadow-inset-center {
+  0% {
+    -webkit-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
+            box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    -webkit-box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.5);
+            box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.5);
   }
 }

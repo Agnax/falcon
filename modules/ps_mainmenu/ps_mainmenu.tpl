@@ -15,11 +15,16 @@
           <div class="main-menu__item-header">
           {/if}
             <a
-              class="d-md-flex w-100 h-100 main-menu__item-link {if $depth === 0}main-menu__item-link--top{else}main-menu__item-link--sub main-menu__item-link--{$depth}{/if} {if $node.children|count}main-menu__item-link--hassubmenu{else}main-menu__item-link--nosubmenu{/if}"
+              class="d-md-flex flex-md-column w-100 h-100 main-menu__item-link {if $depth === 0}main-menu__item-link--top{else}main-menu__item-link--sub main-menu__item-link--{$depth}{/if} {if $node.children|count}main-menu__item-link--hassubmenu{else}main-menu__item-link--nosubmenu{/if}"
               href="{$node.url}" data-depth="{$depth}"
               {if $node.open_in_new_window} target="_blank" {/if}
             >
               <span class="align-self-center">{$node.label}</span>
+            {if $node.depth <= 2}
+              {if $node.image_urls|count}
+              <div class="img-thumbail rounded align-self-center" style="background-image: url('{$node.image_urls[0]}'); background-size: cover; height: 80px; width: 120px"></div>
+              {/if}
+            {/if}
             </a>
             {if $node.children|count}
             {* Cannot use page identifier as we can have the same page several times *}

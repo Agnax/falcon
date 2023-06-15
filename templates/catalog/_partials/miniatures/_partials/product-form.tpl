@@ -9,7 +9,7 @@
             class="form-control input-qty"
           >
           <button
-            class="btn btn-primary btn-block add-to-cart"
+            class="btn btn-success btn-block add-to-cart"
             data-button-action="add-to-cart"
             type="submit"
             {if !$product.add_to_cart_url}

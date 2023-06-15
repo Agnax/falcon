@@ -63,7 +63,7 @@
                             </a>
                         </div>
 
-                        <div class="col-md-4 col header-top__block header-top__block--logo">
+                        <div class="col-md-2 col-4 header-top__block header-top__block--logo">
                             <a href="{$urls.pages.index}">
                                 {images_block webpEnabled=$webpEnabled}
                                     <img
@@ -79,10 +79,15 @@
                                 {/images_block}
                             </a>
                         </div>
-
                         {hook h='displayTop'}
                     </div>
-
+                </div>
+            </div>
+            <div class="d-none d-md-flex pb-md-0 mt-md-2 bg-dark">
+                <div class="container">
+                    <div class="row header-top__row bg-dark">
+                        {hook h='displayTopMenu'}
+                    </div>
                 </div>
             </div>
         </div>

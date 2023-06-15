@@ -1,10 +1,10 @@
-name: falcon
-display_name: Falcon theme
-version: 3.1.1
+name: Austromex
+display_name: Austromex Theme
+version: 1.0.0
 author:
-  name: "Igor Stępień"
-  email: "igor@istepien.dev"
-  url: "https://github.com/Oksydan"
+  name: "Agnax"
+  email: "emmanuelh@diheresa.com"
+  url: "https://github.com/Agnax"
 
 meta:
   compatibility:
@@ -74,6 +74,7 @@ global_settings:
         - is_searchbar
         - ps_customersignin
         - is_shoppingcart
+      displayTopMenu:
         - ps_mainmenu
       displayHome:
         - is_imageslider

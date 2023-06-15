@@ -16,6 +16,7 @@ exports.configureDevServer = (serverAddress, publicPath, port, siteURL) => ({
       warnings: false,
     },
   },
+  https: true,
   devMiddleware: {
     publicPath: publicPath,
     writeToDisk: (filePath) => {
