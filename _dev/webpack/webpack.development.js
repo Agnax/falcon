@@ -1,3 +1,4 @@
+/* eslint-disable */
 const { configureDevServer } = require('./webpack.parts');
 const { HotAcceptPlugin } = require('hot-accept-webpack-plugin');
 const webpack = require('webpack');

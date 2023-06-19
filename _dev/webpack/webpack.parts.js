@@ -1,3 +1,4 @@
+/* eslint-disable */
 const chokidar = require('chokidar');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
@@ -16,7 +17,6 @@ exports.configureDevServer = (serverAddress, publicPath, port, siteURL) => ({
       warnings: false,
     },
   },
-  https: true,
   devMiddleware: {
     publicPath: publicPath,
     writeToDisk: (filePath) => {

@@ -75,6 +75,6 @@
   },
   "private": true,
   "workspaces": [
-    "../../../modules/*/_theme_dev/"
+    "../modules/*/_theme_dev/"
   ]
 }

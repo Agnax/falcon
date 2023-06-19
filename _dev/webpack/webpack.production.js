@@ -1,3 +1,4 @@
+/* eslint-disable */
 const { ESBuildMinifyPlugin } = require('esbuild-loader');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const PurgeCSSPlugin = require('purgecss-webpack-plugin');

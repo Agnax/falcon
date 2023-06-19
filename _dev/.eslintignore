@@ -1,4 +1,4 @@
 /node_modules/
-/webpack/
+/webpack/**/*.js
 postcss.config.js
 webpack.config.js
