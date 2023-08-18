@@ -2,10 +2,12 @@
 
 .main-menu {
   $self: &;
+  $size-menu: 180px;
 
   &__item-header {
     display: flex;
     align-items: center;
+
     @include media-breakpoint-up(md) {
       display: block;
     }
@@ -14,6 +16,7 @@
   &__dropdown {
     margin: -#{$modal-inner-padding} -#{$modal-inner-padding} map.get($spacers, 3);
     border-bottom: 1px solid $border-color;
+
     @include media-breakpoint-up(md) {
       position: relative;
       display: flex;
@@ -30,6 +33,25 @@
       &--1 {
         display: flex;
         flex-wrap: wrap;
+        flex-direction: column;
+        width: $size-menu;
+      }
+
+      &--2 {
+        display: none;
+
+        @include media-breakpoint-up(md) {
+          position: absolute;
+          left: $size-menu;
+          top: -40px;
+          flex-direction: column;
+          min-width: max-content;
+          width: 100%;
+          padding: 10px;
+          gap: 5px;
+          background-color: $white;
+          box-shadow: $box-shadow;
+        }
       }
     }
   }
@@ -59,6 +81,7 @@
 
     &--sub {
       color: $gray-900;
+
       @include media-breakpoint-up(md) {
         margin: 0 0 map.get($spacers, 1);
       }
@@ -70,6 +93,7 @@
 
     &--2 {
       padding-left: #{$modal-inner-padding + rem-calc(map.get($spacers, 2))};
+
       @include media-breakpoint-up(md) {
         padding: 0;
       }
@@ -77,6 +101,7 @@
 
     &--3 {
       padding-left: #{$modal-inner-padding + rem-calc(map.get($spacers, 3))};
+
       @include media-breakpoint-up(md) {
         padding-left: map.get($spacers, 2);
       }
@@ -84,6 +109,7 @@
 
     &--4 {
       padding-left: #{$modal-inner-padding + rem-calc(map.get($spacers, 4))};
+
       @include media-breakpoint-up(md) {
         padding-left: map.get($spacers, 2);
       }
@@ -118,18 +144,44 @@
 
     &--1 {
       @include media-breakpoint-up(md) {
-        @include custom-col-padded(25%);
+        padding: 2px; //cambios
+        padding-right: 40px;
+
+        .collapse {
+          position: relative;
+        }
+
+        &:hover .main-menu__list--2 {
+          display: flex;
+        }
+
+        &:has(.main-menu__list--2) {
+          position: relative;
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 45%;
+            right: 0;
+            transform: translate(-50%, -50%);
+            width: 0;
+            height: 0;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            border-left: 10px solid $dark;
+          }
+        }
       }
     }
+
   }
 
   &__sub {
     background: $gray-100;
+
     @include media-breakpoint-up(md) {
       position: absolute;
       top: 100%;
-      right: 0;
-      left: 0;
       z-index: 100;
       padding: map.get($spacers, 4) map.get($spacers, 4) map.get($spacers, 3);
       visibility: hidden;
