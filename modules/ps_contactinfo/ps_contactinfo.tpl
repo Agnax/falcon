@@ -50,11 +50,11 @@
       <br>
       {* [1][/1] is for a HTML tag. *}
       {l
-        s='Fax: [1]%fax%[/1]'
+        s='WhatsApp: [1]%whatsapp%[/1]'
         sprintf=[
-          '[1]' => '<span>',
-          '[/1]' => '</span>',
-          '%fax%' => $contact_infos.fax
+          '[1]' => '<a target="_blank" rel="nofollow" href="https://wa.link/8kso8u">',
+          '[/1]' => '</a>',
+          '%whatsapp%' => $contact_infos.fax
         ]
         d='Shop.Theme.Global'
       }
