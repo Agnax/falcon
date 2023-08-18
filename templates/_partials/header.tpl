@@ -29,11 +29,12 @@
 {/block}
 
 {block name='header_nav'}
-    <nav class="header-nav border-bottom bg-light py-1 d-none d-md-block">
+    <nav class="header-nav border-bottom bg-light py-1 d-md-block">
         <div class="container">
             <div class="row align-items-center">
                 {hook h='displayNav1'}
                 {hook h='displayNav2'}
+                <div class="font-weight-bold d-md-block col-12 col-md d-flex justify-content-center align-items-center">Sitio administrado por<a class="badge badge-warning ml-1 pt-1" href="https://diheresa.com/" rel="nofollow">DIHERESA</a></div>
             </div>
         </div>
     </nav>
