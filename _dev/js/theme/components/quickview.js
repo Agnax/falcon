@@ -18,6 +18,7 @@ $(() => {
       buttonup_class: 'btn btn-touchspin js-touchspin',
       min: 1,
       max: 1000000,
+      step: parseInt($('#quantity_wanted').attr('step'), 10),
     });
   };
 

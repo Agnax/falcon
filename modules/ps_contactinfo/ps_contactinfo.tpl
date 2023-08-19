@@ -39,7 +39,7 @@
       {* [1][/1] is for a HTML tag. *}
       {l s='Call us: [1]%phone%[/1]'
         sprintf=[
-        '[1]' => "<a href='tel:{$contact_infos['phone']|replace:' ':''}'>",
+        '[1]' => "<a class='font-weight-bold' href='tel:{$contact_infos['phone']|replace:' ':''}'>",
         '[/1]' => '</a>',
         '%phone%' => $contact_infos.phone
         ]
@@ -52,7 +52,7 @@
       {l
         s='WhatsApp: [1]%whatsapp%[/1]'
         sprintf=[
-          '[1]' => '<a target="_blank" rel="nofollow" href="https://wa.link/8kso8u">',
+          '[1]' => '<a target="_blank" class="font-weight-bold" rel="nofollow" href="https://wa.link/8kso8u">',
           '[/1]' => '</a>',
           '%whatsapp%' => $contact_infos.fax
         ]
@@ -61,7 +61,7 @@
     {/if}
     {if $contact_infos.email && $display_email}
       <br>
-        {mailto address=$contact_infos.email encode="javascript"}
+        <a class="font-weight-bold" href="mailto:{$contact_infos.email}">{$contact_infos.email}</a>
     {/if}
   </div>
 

@@ -25,7 +25,7 @@
 
 {block name='breadcrumb'}
   {if $breadcrumb.links|count > 1}
-    <nav aria-label="breadcrumb" data-depth="{$breadcrumb.count}">
+    <nav class="mt-3" aria-label="breadcrumb" data-depth="{$breadcrumb.count}">
       {block name='breadcrumb_list'}
         <ol class="breadcrumb">
           {foreach from=$breadcrumb.links item=path name=breadcrumb}

@@ -64,6 +64,7 @@
         <div class="col-md-7 mb-4">
           {block name='page_header_container'}
             {block name='page_header'}
+              <span class="text-secondary">Sku: #{$product.reference}</span>
               <h1 class="h1">{block name='page_title'}{$product.name}{/block}</h1>
             {/block}
           {/block}

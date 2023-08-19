@@ -68,10 +68,11 @@
     &--top {
       @include font-size($font-size-lg);
       font-weight: 700;
-      color: $gray-900;
+      color: $gray-200; //cambio $gray-900
 
       @include hover-focus() {
         text-decoration: none;
+        color: $white //agregado
       }
 
       @include media-breakpoint-up(md) {
@@ -183,7 +184,7 @@
       position: absolute;
       top: 100%;
       z-index: 100;
-      padding: map.get($spacers, 4) map.get($spacers, 4) map.get($spacers, 3);
+      padding: map.get($spacers, 2) map.get($spacers, 4) map.get($spacers, 3);
       visibility: hidden;
       background: $white;
       box-shadow: $box-shadow;
@@ -193,3 +194,11 @@
     }
   }
 }
+
+.js-top-menu.mobile a.main-menu__item-link--top {
+  color:$black!important;
+}
+
+.icon-toggle-down:before, .icon-caret-square-o-down:before, .icon-collapse:before {
+  content:""!important;
+  }

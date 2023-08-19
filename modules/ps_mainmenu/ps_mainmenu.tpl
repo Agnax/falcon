@@ -14,19 +14,25 @@
           {if $node.children|count}
           <div class="main-menu__item-header">
           {/if}
-            <a
-              class="d-md-flex w-100 h-100 main-menu__item-link {if $depth === 0}main-menu__item-link--top{else}main-menu__item-link--sub main-menu__item-link--{$depth}{/if} {if $node.children|count}main-menu__item-link--hassubmenu{else}main-menu__item-link--nosubmenu{/if}"
-              href="{$node.url}" data-depth="{$depth}"
-              {if $node.open_in_new_window} target="_blank" {/if}
-            >
-              <span class="align-self-center">{$node.label}</span>
-            </a>
+          <a
+            class="d-md-flex w-100 h-100 main-menu__item-link {if $depth === 0}main-menu__item-link--top{else}main-menu__item-link--sub main-menu__item-link--{$depth}{/if} {if $node.children|count}main-menu__item-link--hassubmenu{else}main-menu__item-link--nosubmenu{/if}"
+            href="{$node.url}" data-depth="{$depth}"
+            {if $node.open_in_new_window} target="_blank" {/if}
+            {assign var=_menuitem_label value=$node.label|escape}
+            role="menuitem" aria-label="{$_menuitem_label}"
+            aria-haspopup="{if $node.children|count}true{/if}" aria-expanded="false"
+            aria-owns="{if $node.children|count}top_sub_menu_{$_expand_id}{/if}" aria-controls="{if $node.children|count}top_sub_menu_{$_expand_id}{/if}"
+          >
+            <span class="align-self-center">{$_menuitem_label}</span>
+          </a>
+      
             {if $node.children|count}
             {* Cannot use page identifier as we can have the same page several times *}
             {assign var=_expand_id value=10|mt_rand:100000}
             <span class="d-block d-md-none">
                 <span data-target="#top_sub_menu_{$_expand_id}" data-toggle="collapse"
-                      class="d-block navbar-toggler icon-collapse">
+                      class="d-block navbar-toggler icon-collapse" role="button" aria-controls="top_sub_menu_{$_expand_id}"
+                      aria-expanded="false" aria-label="Toggle Submenu">
                   <i class="material-icons">&#xE313;</i>
                 </span>
               </span>
@@ -48,7 +54,7 @@
 {/function}
 
 <div class="d-none d-md-block col-12 header-top__block header-top__block--menu mt-1">
-  <div class="main-menu" id="_desktop_top_menu">
+  <nav class="main-menu" id="_desktop_top_menu" role="menubar" aria-label="Main Menu">
     {menu nodes=$menu.children}
-  </div>
+  </nav>
 </div>

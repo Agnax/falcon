@@ -44,7 +44,7 @@
     <div class="js-header-top-wrapper">
 
         <div class="header-top js-header-top">
-            <div class="header-top__content pt-md-3 pb-md-0 py-2">
+            <div class="header-top__content pt-md-3 pb-md-0 py-2 bg-dark">
 
                 <div class="container">
 

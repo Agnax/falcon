@@ -37,6 +37,7 @@
             {if $product.quantity_wanted}
               value="{$product.quantity_wanted}"
               min="{$product.minimal_quantity}"
+              step="{$product.minimal_quantity}"
             {else}
               value="1"
               min="1"

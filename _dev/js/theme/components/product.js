@@ -23,6 +23,7 @@ $(() => {
       buttonup_class: 'btn btn-touchspin js-touchspin',
       min: parseInt($quantityInput.attr('min'), 10),
       max: 1000000,
+      step: parseInt($quantityInput.attr('step'), 10),
     });
 
     $quantityInput.on('focusout', () => {
