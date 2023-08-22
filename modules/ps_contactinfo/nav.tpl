@@ -22,7 +22,7 @@
  * @copyright Since 2007 PrestaShop SA and Contributors
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  *}
-<div id="_desktop_contact_link" class="col-md-9">
+<div id="_desktop_contact_link" class="col-xs-7 col-xl-9">
   <div id="contact-link" class="m-4 m-md-1">
     {if $contact_infos.phone}
       {* [1][/1] is for a HTML tag. *}
