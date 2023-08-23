@@ -128,6 +128,7 @@
             inputmode="numeric"
             pattern="[0-9]*"
             value="{$product.quantity}"
+            step="{$product.minimal_quantity}"
             name="product-quantity-spin"
             min="{$product.minimal_quantity}"
             aria-label="{l s='%productName% product quantity field' sprintf=['%productName%' => $product.name] d='Shop.Theme.Checkout'}"

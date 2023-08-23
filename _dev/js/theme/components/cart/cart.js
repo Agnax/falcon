@@ -77,6 +77,7 @@ function createSpin() {
       buttonup_class: 'btn btn-touchspin js-touchspin js-decrease-product-quantity',
       min: parseInt($(spinner).attr('min'), 10),
       max: 1000000,
+      step: parseInt($(spinner).attr('step'), 10),
     });
   });
 
