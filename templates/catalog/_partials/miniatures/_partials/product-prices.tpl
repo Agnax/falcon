@@ -1,7 +1,7 @@
 {block name='product_price_and_shipping'}
   {if $product.show_price}
     <div class="product-miniature__pricing d-flex justify-content-between">
-      <span class="text-secondary" aria-label="{l s='Price' d='Shop.Theme.Catalog'}">Sku: {$product.reference}</span>
+      <span class="text-secondary" aria-label="sku">Sku: {$product.reference}</span>
       {if $product.has_discount}
         {hook h='displayProductPriceBlock' product=$product type="old_price"}
         <span class="price price--regular mr-1" aria-label="{l s='Regular price' d='Shop.Theme.Catalog'}">{$product.regular_price}</span>
