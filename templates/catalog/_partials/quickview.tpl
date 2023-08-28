@@ -43,7 +43,7 @@
           {block name='product_prices'}
             {include file='catalog/_partials/product-prices.tpl'}
           {/block}
-          <span class="text-secondary">Sku: #{$product.reference}</span>
+          <span class="text-secondary">Sku: #{$product.reference|string_format:"%d"}</span>
           {block name='product_description_short'}
             <div id="product-description-short">{$product.description_short nofilter}</div>
           {/block}

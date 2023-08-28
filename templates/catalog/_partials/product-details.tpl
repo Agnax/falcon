@@ -23,7 +23,7 @@
     {if isset($product.reference_to_display) && $product.reference_to_display neq ''}
       <div class="product-reference">
         <label class="label">{l s='Reference' d='Shop.Theme.Catalog'} </label>
-        <span>{$product.reference_to_display}</span>
+        <span>{$product.reference_to_display|string_format:"%d"}</span>
       </div>
     {/if}
   {/block}
